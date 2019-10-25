@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  
+  
+  <title>
+    Math Quiz
+  </title>
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+  <header class="w3-container w3-theme w3-padding" id="myHeader">
+  <div class="w3-center">
+  <!--h1 class="w3-xxxlarge w3-animate-bottom">Math Quiz</h1-->
+  <h1 class="w3-xxxlarge">Math Quiz</h1>
+
+  <h4>Welcome to the your Math Quiz!<br>It's due in 3 minutes, so hop to it.</h4>
+    <div class="w3-padding-32">
+    </div>
+  </div>
+</header>
+  <body>
+    <script>
+      window.onload="initilize" ;
+    </script>
+    
+    <center>
+    
+    </center>
+    
+    <br/>
+    <p></p>
+    
+    <div id="app">
+    <span v-if="seen1"><!--/span-->
+    <h1><center>Question 1</center></h1>
+    <h2><center>7 + 8 x 2</center></h2>
+      <h2>Enter your answer:</h1>
+      <form v-on:keyup.prevent="fetchREST" onsubmit="return false">
+        <input type="text" v-model="prefix">
+      </form>
+    </span>
+    <span v-if="seen2"><!--/span-->
+    <h1><center>Question 2</center></h1>
+    <h2><center>2^3 + 7</center></h2>
+      <h2>Enter your answer:</h1>
+      <form v-on:keyup.prevent="fetchREST" onsubmit="return false">
+        <input type="text" v-model="prefix2">
+      </form>
+    </span>
+    <span v-if="seen3"><!--/span-->
+    <h1><center>Question 3</center></h1>
+    <h2><center>27 / 3</center></h2>
+      <h2>Enter your answer:</h1>
+      <form v-on:keyup.prevent="fetchREST" onsubmit="return false">
+        <input type="text" v-model="prefix3">
+      </form>
+    </span>
+    
+    <span v-if="seaGoat"><!--/span-->
+    <h1><center>Good Job!<br>Here's a picture of a goat.<br>You've earned it.</center></h1>
+    <center><img src="https://placegoat.com/400/400"></center>
+    
+    </span>
+    
+    </div>
+    
+  
+  
+    <!--script src="moment.js"></script>-->
+    <!---script src="javascript.js"></script--->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+  
+  
+  <div class="w3-left w3-blue-grey">
+      <h2><center>About this Project</center></h2>
+      <p><left>Vue is used to swap between questions without reloading the webpage. While the equestions and answers are hardcoded, the questions would ideally be generated and then passed off to an API to solve.
+      <br>Since I don't have the math api working yet, I instead congratulate you with a picture of a goat.
+      <br>It's not actually timed or anything either.
+      </left></p>
+      
+    </div>
+    <br><br>
+  
+  
+  <footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Please don't, but if you need to -> <a href="https://github.com/BYUCS260/lab2-javascript-atcotton">Github</a></h3>
+  <p>Powered (ineffectively - my b) by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
+    <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+</html>
